@@ -1,4 +1,5 @@
 // build off of Dylan's basic backend starter
+// later change to auth as advised by Bryan
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.mjs';

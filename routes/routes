@@ -1,0 +1,58 @@
+// Routes
+app.post('/agencies', async (req, res) => {
+    try {
+        const agency = new Agency(req.body);
+        await agency.save();
+        res.status(201).json(agency);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+app.get('/agencies', async (req, res) => {
+    const agencies = await Agency.find();
+    res.json(agencies);
+});
+
+app.put('/agencies/:id', async (req, res) => {
+    try {
+        const agency = await Agency.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(agency);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+app.delete('/agencies/:id', async (req, res) => {
+    try {
+        await Agency.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Agency data deleted' });
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+// User routes
+app.post('/users', async (req, res) => {
+    try {
+        const user = new User(req.body);
+        await user.save();
+        res.status(201).json(user);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+app.get('/users/:username', async (req, res) => {
+    const user = await User.findOne({ username: req.params.username });
+    res.json(user);
+});
+
+app.put('/users/:username', async (req, res) => {
+    try {
+        const user = await User.findOneAndUpdate({ username: req.params.username }, req.body, { new: true });
+        res.json(user);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
