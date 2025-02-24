@@ -3,14 +3,20 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.mjs';
+import agencyRouter from './routes/agencyRouter.mjs'
+import userRouter from './routes/userRouter.mjs'
 
 
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3003;
 
-app.use(express);
+app.use(express.json());
 connectDB();
+// Register Routers
+app.use('/agencies', agencyRouter);
+app.use('/users', userRouter);
+
 
 // Listener
 app.listen(PORT, () => {
