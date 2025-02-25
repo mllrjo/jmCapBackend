@@ -1,5 +1,6 @@
 // User Routes
 import express from 'express';
+import User from '../models/userSchema.mjs'
 const userRouter = express.Router();
 userRouter.post('/', async (req, res) => {
     try {
