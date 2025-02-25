@@ -8,14 +8,10 @@ import cors from 'cors';
 
 const app = express();
 
-app.use(cors({
-    origin: "*",
-    methods: "GET,POST,PUT,DELETE,OPTIONS",
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 5002;
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 connectDB();
 
