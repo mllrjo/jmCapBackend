@@ -3,6 +3,7 @@
 import connectDB from './config/db.mjs';
 import agencyRouter from './routes/agencyRouter.mjs'
 import userRouter from './routes/userRouter.mjs'
+import initialData from './config/initialData.mjs';
 import express from 'express';
 import cors from 'cors';
 

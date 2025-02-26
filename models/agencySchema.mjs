@@ -2,8 +2,8 @@
 // Agency Schema
 import mongoose from 'mongoose'
 const agencySchema = new mongoose.Schema({
-    dateCollected: Date,
-    agency: String,
+    Date: Date,
+    Agency: String,
     fired: Number,
     rehired: Number,
     totalPersonnel: Number,
