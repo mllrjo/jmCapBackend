@@ -51,11 +51,11 @@ const seedDatabase = async () => {
         await Agency.insertMany(sortedData);
 
         console.log('Database seeded successfully');
-        process.exit();
+//        process.exit();
     } catch (error) {
         console.error('Error seeding database:', error);
-        process.exit(1);
+//        process.exit(1);
     }
 };
 
-export default seedDatabase();
+export default seedDatabase;

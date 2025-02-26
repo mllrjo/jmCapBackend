@@ -7,8 +7,8 @@ const agencySchema = new mongoose.Schema({
     fired: Number,
     rehired: Number,
     totalPersonnel: Number,
-    sources: [String],
-    summary: String
+    Sources: [String],
+    Summary: String
 });
 
 export default mongoose.model('Agency', agencySchema);
