@@ -13,15 +13,7 @@ const initialData = [
       "summary": "The National Institutes of Health (NIH) laid off approximately 1,165 employees, constituting about 5.7% of its workforce, as part of a broader federal workforce reduction initiative.",
       "source": ["https://www.reuters.com/world/us/trump-administration-lays-off-fda-employees-stat-news-reports-2025-02-16/"]
     },
-    {
-      "agency": "CDC",
-      "date": "2025-02-14",
-      "fired": "1300",
-      "rehired": "0",
-      "total_employees": 13000,
-      "summary": "The Centers for Disease Control and Prevention (CDC) terminated approximately 1,300 probationary employees, representing about 10% of its workforce, as part of federal workforce reduction efforts.",
-      "source": ["https://www.reuters.com/business/healthcare-pharmaceuticals/cdc-lose-one-tenth-workforce-under-trump-administration-probationary-job-cuts-ap-2025-02-14/"]
-    },
+    
     {
       "agency": "FDA",
       "date": "2025-02-16",
